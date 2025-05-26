@@ -1,27 +1,38 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
 <head>
+    <!-- 设置文档类型为HTML5 -->
     <meta charset="UTF-8" />
+    <!-- 设置字符编码为UTF-8 -->
     <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <!-- 设置视口宽度为设备宽度，初始缩放比例为1 -->
     <title>811集团 智能栽培系统</title>
+    <!-- 设置网页标题 -->
     <script src="https://cdn.tailwindcss.com"></script>
+    <!-- 引入Tailwind CSS -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" rel="stylesheet" />
+    <!-- 引入Font Awesome图标库 -->
     <style>
+        /* 设置背景颜色为线性渐变 */
         body {
             background: linear-gradient(to bottom, #e5e7eb, #f3f4f6);
         }
+        /* 设置导航栏阴影 */
         nav {
             box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
         }
+        /* 设置产品卡片背景颜色和阴影 */
         .product-card {
             background: linear-gradient(to bottom, #ffffff, #f9fafb);
             box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
         }
+        /* 设置白色背景区域背景颜色和阴影 */
         section.bg-white {
             background: linear-gradient(to bottom, #ffffff, #f9fafb);
             box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
             border-radius: 0.5rem;
         } 
+        /* 设置鼠标悬停时缩放效果 */
         .hover-scale {
             transition: transform 0.3s ease;
         }
@@ -43,6 +54,7 @@
             flex: 2;
             padding: 2rem;
         }
+        /* 设置在小屏幕上以垂直方式显示 */
         @media (max-width: 768px) {
             .horizontal-card {
                 flex-direction: column;
@@ -51,53 +63,86 @@
     </style>
 </head>
 <body class="font-sans">
+    <!-- 设置字体为sans-serif -->
     <nav class="bg-blue-600 p-4">
+        <!-- 设置导航栏背景颜色和内边距 -->
         <div class="container mx-auto flex justify-between items-center">
+            <!-- 设置容器居中，水平排列，垂直居中对齐 -->
             <a href="#" class="flex items-center text-white text-xl font-bold space-x-3">
+                <!-- 设置链接为白色，字体大小为20px，加粗，间距为10px -->
                 <img src="logo.png" alt="811集团 Logo" class="w-10 h-10 object-contain" />
+                <!-- 设置图片宽度为10px，高度为10px，内容包含 -->
                 <span>811集团 智能栽培系统</span>
             </a>
+            <!-- 设置链接为白色，字体大小为20px，加粗，间距为10px -->
             <ul class="flex space-x-4">
+                <!-- 设置链接为白色，字体大小为20px，加粗，间距为10px -->
                 <li><a href="#" class="text-white hover:text-gray-200">首页</a></li>
+                <!-- 设置链接为白色，字体大小为20px，加粗，间距为10px -->
                 <li><a href="#" class="text-white hover:text-gray-200">产品</a></li>
+                <!-- 设置链接为白色，字体大小为20px，加粗，间距为10px -->
                 <li><a href="#" class="text-white hover:text-gray-200">联系我们</a></li>
+                <!-- 设置链接为白色，字体大小为20px，加粗，间距为10px -->
             </ul>
         </div>
     </nav>
 
     <header class="text-center py-20">
+        <!-- 设置标题居中，上下内边距为20px -->
         <h1 class="text-5xl font-bold text-gray-800 mb-2">智能栽培系统</h1>
+        <!-- 设置标题字体大小为50px，加粗，颜色为灰色，下边距为2px -->
         <p class="text-gray-600 text-lg">811集团专注于高效智能农业解决方案</p>
+        <!-- 设置段落字体大小为20px，颜色为灰色 -->
     </header>
 
     <div class="container mx-auto p-8">
+        <!-- 设置容器居中，上下内边距为8px -->
         <div class="bg-white rounded-xl overflow-hidden hover-scale product-card horizontal-card">
+            <!-- 设置背景颜色为白色，圆角为1rem，溢出隐藏，鼠标悬停时缩放 -->
             <div class="card-image flex items-center justify-center">
+                <!-- 设置图片居中，水平排列，垂直居中对齐 -->
                 <!-- 替换为你的种子发芽图片URL -->
                 <img src="true.jpg" 
                      alt="种子发芽" 
                      class="rounded-lg max-w-full h-auto shadow-lg transform hover:scale-105 transition-transform duration-500" />
+                <!-- 设置图片圆角为1rem，最大宽度为100%，高度自适应，阴影，鼠标悬停时缩放，过渡时间为0.5秒 -->
             </div>
             <div class="card-content">
+                <!-- 设置卡片内容 -->
                 <p class="text-gray-600 text-xl mb-4">高效智能栽培方案</p>
+                <!-- 设置段落字体大小为20px，颜色为灰色，下边距为4px -->
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <!-- 设置网格布局，1列，中等屏幕以上2列，间距为6px -->
                     <div>
+                        <!-- 设置卡片内容 -->
                         <h3 class="text-xl font-bold text-gray-800 mb-2">产品特点</h3>
+                        <!-- 设置标题字体大小为20px，加粗，颜色为灰色，下边距为2px -->
                         <ul class="list-disc text-gray-700 mb-4 pl-5">
+                            <!-- 设置列表样式为圆点，字体大小为20px，颜色为灰色，下边距为4px，左边距为5px -->
                             <li class="mb-2">温湿度检测</li>
+                            <!-- 设置列表项下边距为2px -->
                             <li class="mb-2">智能灌溉</li>
+                            <!-- 设置列表项下边距为2px -->
                             <li class="mb-2">远程监控管理</li>
+                            <!-- 设置列表项下边距为2px -->
                         </ul>
                         <h3 class="text-xl font-bold text-gray-800 mb-2">技术细节</h3>
+                        <!-- 设置标题字体大小为20px，加粗，颜色为灰色，下边距为2px -->
                         <p class="text-gray-700">结合传感器、实现环境数据实时采集与智能控制。</p>
+                        <!-- 设置段落字体大小为20px，颜色为灰色 -->
                     </div>
                     <div>
+                        <!-- 设置卡片内容 -->
                         <h3 class="text-xl font-bold text-gray-800 mb-2">应用场景</h3>
+                        <!-- 设置标题字体大小为20px，加粗，颜色为灰色，下边距为2px -->
                         <p class="text-gray-700 mb-4">适用于温室种植、垂直农场和家庭园艺，满足不同规模的栽培需求。</p>
+                        <!-- 设置段落字体大小为20px，颜色为灰色，下边距为4px -->
                         <div class="mt-6">
+                            <!-- 设置上边距为6px -->
                             <a href="#" class="inline-block bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700 transition-colors">
                                 了解更多 <i class="fa fa-arrow-right ml-2"></i>
                             </a>
+                            <!-- 设置链接为蓝色，字体大小为20px，加粗，内边距为6px 3px，圆角为1rem，鼠标悬停时背景颜色为深蓝色，过渡时间为0.3秒 -->
                         </div>
                     </div>
                 </div>
@@ -106,15 +151,22 @@
     </div>
 
     <section class="bg-white py-12 px-8 mx-12 my-12">
+        <!-- 设置背景颜色为白色，上下内边距为12px，左右外边距为12px，上下外边距为12px -->
         <div class="text-center">
+            <!-- 设置文本居中 -->
             <h2 class="text-3xl font-bold mb-6">联系我们</h2>
+            <!-- 设置标题字体大小为30px，加粗，下边距为6px -->
             <p class="mb-4">电话: <a href="tel:13890205928" class="text-blue-600 hover:underline">13890205928</a></p>
+            <!-- 设置段落字体大小为20px，下边距为4px -->
             <p class="mb-4">邮箱: <a href="mailto:2575704031@qq.com" class="text-blue-600 hover:underline">2575704031@qq.com</a></p>
+            <!-- 设置段落字体大小为20px，下边距为4px -->
         </div>
     </section>
 
     <footer class="bg-blue-600 p-4 text-center text-white">
+        <!-- 设置背景颜色为蓝色，内边距为4px，文本居中，颜色为白色 -->
         <p>&copy; 2025 811集团 智能栽培系统 版权所有</p>
+        <!-- 设置段落字体大小为20px -->
     </footer>
 </body>
 </html>
