@@ -346,7 +346,7 @@
                         </p>
                     </div>
 
-                    <div class="grid md:grid-cols-2 gap-12">
+                    <div class="grid md:grid-cols-1 gap-12">
                         <!-- 联系信息 -->
                         <div class="space-y-8">
                             <div class="flex items-center space-x-4 p-6 bg-gray-50 rounded-xl hover:bg-blue-50 transition-colors group">
@@ -382,54 +382,6 @@
                                     <p class="text-gray-600 font-medium">周一至周日 8:00-20:00</p>
                                 </div>
                             </div>
-                        </div>
-
-                        <!-- 快速咨询表单 -->
-                        <div class="bg-gray-50 p-8 rounded-xl">
-                            <h3 class="text-2xl font-bold text-gray-800 mb-6 text-center">快速咨询</h3>
-                            <form @submit.prevent="handleSubmit" class="space-y-6">
-                                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                                    <div>
-                                        <label class="block text-gray-700 font-medium mb-2">您的姓名</label>
-                                        <input 
-                                            v-model="form.name"
-                                            type="text" 
-                                            placeholder="请输入您的姓名"
-                                            class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all"
-                                            required
-                                        >
-                                    </div>
-                                    <div>
-                                        <label class="block text-gray-700 font-medium mb-2">联系电话</label>
-                                        <input 
-                                            v-model="form.phone"
-                                            type="tel" 
-                                            placeholder="请输入您的电话"
-                                            class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all"
-                                            required
-                                        >
-                                    </div>
-                                </div>
-                                
-                                <div>
-                                    <label class="block text-gray-700 font-medium mb-2">咨询内容</label>
-                                    <textarea 
-                                        v-model="form.message"
-                                        placeholder="请描述您的需求或问题..."
-                                        rows="4"
-                                        class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent resize-none transition-all"
-                                        required
-                                    ></textarea>
-                                </div>
-                                
-                                <button 
-                                    type="submit" 
-                                    class="btn-primary w-full py-4 text-white font-semibold rounded-lg hover:shadow-lg transition-all duration-300"
-                                >
-                                    <i class="fas fa-paper-plane mr-2"></i>
-                                    提交咨询
-                                </button>
-                            </form>
                         </div>
                     </div>
                 </div>
@@ -519,13 +471,6 @@
                 const showBackToTop = ref(false);
                 const activeSection = ref('home');
                 
-                // 表单数据
-                const form = ref({
-                    name: '',
-                    phone: '',
-                    message: ''
-                });
-
                 // 方法
                 const toggleMobileMenu = () => {
                     mobileMenuOpen.value = !mobileMenuOpen.value;
@@ -538,20 +483,6 @@
                 const handleMobileClick = (section) => {
                     setActiveSection(section);
                     mobileMenuOpen.value = false;
-                };
-
-                const handleSubmit = () => {
-                    if (form.value.name && form.value.phone && form.value.message) {
-                        alert('感谢您的咨询！我们会尽快联系您。');
-                        // 重置表单
-                        form.value = {
-                            name: '',
-                            phone: '',
-                            message: ''
-                        };
-                    } else {
-                        alert('请填写完整的信息后再提交。');
-                    }
                 };
 
                 const scrollToTop = () => {
@@ -574,11 +505,9 @@
                     mobileMenuOpen,
                     showBackToTop,
                     activeSection,
-                    form,
                     toggleMobileMenu,
                     setActiveSection,
                     handleMobileClick,
-                    handleSubmit,
                     scrollToTop
                 };
             }
